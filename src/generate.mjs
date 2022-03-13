@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 import chalk from 'chalk'
-import { getEmail } from './email.js'
+import { getEmail } from './email.mjs'
 
 const heading = (text) =>
   console.log(chalk.magenta.italic.bold(`--------${text}--------`))

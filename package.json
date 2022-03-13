@@ -2,10 +2,10 @@
   "name": "bedbug",
   "version": "1.0.0",
   "description": "NodeJS cli tool to generate throwaway information",
-  "main": "src/index.js",
+  "main": "src/index.mjs",
   "scripts": {
-    "start": "node src/index.js",
-    "build": "esbuild src/index.js --bundle --minify --platform=node --outfile=build.js",
+    "start": "node src/index.mjs",
+    "build": "esbuild src/index.mjs --bundle --minify --platform=node --format=cjs --outfile=build.js",
     "preview": "node build.js"
   },
   "keywords": [
@@ -17,17 +17,15 @@
   "author": "Gejsi <vgejsi@gmail.com>",
   "license": "ISC",
   "bin": {
-    "bedbug": "src/index.js"
+    "bedbug": "src/index.mjs"
   },
   "dependencies": {
     "@faker-js/faker": "^6.0.0-beta.0",
     "chalk": "^5.0.1",
-    "clui": "^0.3.6",
     "commander": "^9.0.0",
     "esbuild": "^0.14.25",
     "html": "^1.0.0",
-    "node-fetch": "^3.2.3",
-    "terser": "^5.12.0"
+    "node-fetch": "^3.2.3"
   },
   "files": [
     "build.js"

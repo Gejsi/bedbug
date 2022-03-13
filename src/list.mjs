@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import html from 'html'
 import fetch from 'node-fetch'
-import { baseUrl } from './email.js'
+import { baseUrl } from './email.mjs'
 
 const list = async (email, options) => {
   const [name, domain] = email.split('@')

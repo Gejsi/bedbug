@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { program } from 'commander'
-import generate from './generate.js'
-import list from './list.js'
+import generate from './generate.mjs'
+import list from './list.mjs'
 
 program.version('1.0.0')
 
