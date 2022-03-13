@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import html from 'html'
 import fetch from 'node-fetch'
-import { baseUrl } from './email.mjs'
+import { baseUrl, printEmails } from './email.mjs'
 
 const list = async (email, options) => {
   const [name, domain] = email.split('@')
@@ -16,7 +16,7 @@ const list = async (email, options) => {
     const response = await fetch(url)
     const emails = await response.json()
 
-    if (id === undefined && recent !== true) console.log(emails)
+    if (id === undefined && recent !== true) printEmails(emails)
     else if (recent === true)
       list(email, { id: emails[0].id, recent: undefined })
     else console.log(html.prettyPrint(emails.htmlBody, { indent_size: 2 }))
