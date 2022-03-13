@@ -20,7 +20,7 @@
     "bedbug": "src/index.mjs"
   },
   "dependencies": {
-    "@faker-js/faker": "^6.0.0-beta.0",
+    "@ngneat/falso": "^3.0.0",
     "chalk": "^5.0.1",
     "commander": "^9.0.0",
     "esbuild": "^0.14.25",

@@ -1,4 +1,9 @@
-import { faker } from '@faker-js/faker'
+import {
+  randAddress,
+  randCreditCard,
+  randPassword,
+  randUser,
+} from '@ngneat/falso'
 import chalk from 'chalk'
 import { getEmail } from './email.mjs'
 
@@ -9,18 +14,18 @@ const item = (title, text, isShort) =>
   console.log(chalk.bold(`${title}:\t${isShort ? '\t' : ''}`), text)
 
 const generate = () => {
-  const firstName = faker.name.firstName()
-  const lastName = faker.name.lastName()
+  const { firstName, lastName, phone } = randUser()
   const email = getEmail(firstName)
-  const password = faker.internet.password(10)
-  const phone = faker.phone.phoneNumber()
-  const country = faker.address.country()
-  const city = faker.address.city()
-  const street = faker.address.streetAddress()
-  const zipCode = faker.address.zipCode()
-  const cardNumber = faker.finance.creditCardNumber()
-  const cardDate = faker.date.soon()
-  const cardCvv = faker.finance.creditCardCVV()
+  const password = randPassword({ size: 10 })
+  const { country, city, street, zipCode } = randAddress({
+    includeCounty: false,
+  })
+
+  const {
+    number: cardNumber,
+    untilEnd: cardDate,
+    ccv: cardCvv,
+  } = randCreditCard()
 
   heading('General information')
   item('First name', firstName)
@@ -35,7 +40,7 @@ const generate = () => {
   item('Zip code', zipCode)
   heading('Credit/Debit card')
   item('Card number', cardNumber)
-  item('End date', cardDate.toLocaleDateString())
+  item('End date', cardDate)
   item('CVV', cardCvv, true)
 }
 
