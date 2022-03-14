@@ -6,6 +6,12 @@
 
 ---
 
+# Installation
+
+```console
+$ npm i -g bedworm
+```
+
 # Usage
 
 Calling `bedworm` prints:

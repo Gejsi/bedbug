@@ -1,6 +1,6 @@
 {
   "name": "bedworm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS cli tool to generate throwaway information",
   "main": "build.js",
   "scripts": {
@@ -28,7 +28,8 @@
     "node-fetch": "^3.2.3"
   },
   "files": [
-    "build.js"
+    "build.js",
+    "logo.svg"
   ],
   "devDependencies": {
     "esbuild": "^0.14.26"
