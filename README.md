@@ -24,26 +24,35 @@ Commands:
   help [command]            display help for command
 ```
 
+> All commands and options have a shorter corresponding alias, e.g. `list = l` and `--recent = -r`
+
+## `bedbug generate`
+
 Generate some disposable data.
 
 ```console
 $ bedbug generate
 --------General information--------
-First name:	 	 Abbigail
-Last name:		 Batz
-Email:		 	 abbigail@1secmail.net
-Password:	 	 t_imEn4Rs0
-Phone number:	 691.349.2228 x1568
+First name:	 Dilip
+Last name:	 Salazar
+Email:		 dilip@1secmail.com
+Password:	 xpMYlRR6D3
+Phone number:	 +39(021)37 504
 --------Address--------
-Country:	 	 Puerto Rico
-City:			 Lelandview
-Street:		 	 94118 Kessler Villages
-Zip code:	 	 29754
+Country:	 Lao Peoples Democratic Republic
+City:		 Rogers
+Street:		 1035 Kuphal Mountain
+Zip code:	 69603-6997
 --------Credit/Debit card--------
-Card number:	 6759-5991-7090-0386-674
-End date:	 	 3/13/2022
-CVV:		 	 163
+Card number:	 4716461751210734
+End date:	 	 08/22
+CVV:			 994
+Card type:	 	 VISA
 ```
+
+Generated credit card numbers passed the **_Luhn check_**, however they may not work.<br /> You can try to generate some new data, but don't expect anything magical from a random credit card generator.
+
+## `bedbug list`
 
 Get a list of all messages sent to your temporary email.
 
@@ -62,5 +71,3 @@ View the most recent email sent to your disposable inbox.
 ```console
 $ bedbug list abbigail@1secmail.net --recent
 ```
-
-> All commands and options have a shorter corresponding alias, e.g. `list = l` and `--recent = -r`

@@ -23,6 +23,7 @@
     "@ngneat/falso": "^3.0.0",
     "chalk": "^5.0.1",
     "commander": "^9.0.0",
+    "creditcard-generator": "^0.0.7",
     "esbuild": "^0.14.25",
     "html": "^1.0.0",
     "node-fetch": "^3.2.3"

@@ -5,6 +5,7 @@ import {
   randUser,
 } from '@ngneat/falso'
 import chalk from 'chalk'
+import { getRandCard } from './card.mjs'
 import { getEmail } from './email.mjs'
 
 const heading = (text) =>
@@ -21,11 +22,9 @@ const generate = () => {
     includeCounty: false,
   })
 
-  const {
-    number: cardNumber,
-    untilEnd: cardDate,
-    ccv: cardCvv,
-  } = randCreditCard()
+  const [cardNumber, cardType] = getRandCard()
+
+  const { untilEnd: cardDate, ccv: cardCvv } = randCreditCard()
 
   heading('General information')
   item('First name', firstName)
@@ -42,6 +41,7 @@ const generate = () => {
   item('Card number', cardNumber)
   item('End date', cardDate)
   item('CVV', cardCvv, true)
+  item('Card type', cardType)
 }
 
 export default generate
