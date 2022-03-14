@@ -2,7 +2,7 @@
   "name": "bedbug",
   "version": "1.0.0",
   "description": "NodeJS cli tool to generate throwaway information",
-  "main": "src/index.mjs",
+  "main": "build.js",
   "scripts": {
     "start": "node src/index.mjs",
     "build": "esbuild src/index.mjs --bundle --minify --platform=node --format=cjs --outfile=build.js",
@@ -17,18 +17,20 @@
   "author": "Gejsi <vgejsi@gmail.com>",
   "license": "MIT",
   "bin": {
-    "bedbug": "src/index.mjs"
+    "bedbug": "build.js"
   },
   "dependencies": {
     "@ngneat/falso": "^3.0.0",
     "chalk": "^5.0.1",
     "commander": "^9.0.0",
     "creditcard-generator": "^0.0.7",
-    "esbuild": "^0.14.25",
     "html": "^1.0.0",
     "node-fetch": "^3.2.3"
   },
   "files": [
     "build.js"
-  ]
+  ],
+  "devDependencies": {
+    "esbuild": "^0.14.26"
+  }
 }
