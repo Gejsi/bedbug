@@ -17,9 +17,10 @@ const list = async (email, options) => {
     const emails = await response.json()
 
     if (id === undefined && recent !== true) printEmails(emails)
-    else if (recent === true)
-      list(email, { id: emails[0].id, recent: undefined })
-    else console.log(html.prettyPrint(emails.htmlBody, { indent_size: 2 }))
+    else if (recent === true) {
+      if (emails.length === 0) console.log(chalk.yellow('Inbox is empty...'))
+      else list(email, { id: emails[0].id, recent: undefined })
+    } else console.log(html.prettyPrint(emails.htmlBody, { indent_size: 2 }))
   } catch (error) {
     console.log(chalk.red(error.stack || error))
   }
