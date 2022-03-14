@@ -1,4 +1,4 @@
-<h1 align="center">Bedbug</h1>
+<h1 align="center">Bedworm</h1>
 <p align="center">
  <img src="./logo.svg" alt="logo" />
 </p>
@@ -8,11 +8,11 @@
 
 # Usage
 
-Calling `bedbug` prints:
+Calling `bedworm` prints:
 
 ```console
-$ bedbug
-Usage: bedbug [options] [command]
+$ bedworm
+Usage: bedworm [options] [command]
 
 Options:
   -V, --version             output the version number
@@ -26,12 +26,12 @@ Commands:
 
 > All commands and options have a shorter corresponding alias, e.g. `list = l` and `--recent = -r`
 
-## `bedbug generate`
+## `bedworm generate`
 
 Generate some disposable data.
 
 ```console
-$ bedbug generate
+$ bedworm generate
 --------General information--------
 First name:	 Dilip
 Last name:	 Salazar
@@ -52,22 +52,22 @@ Card type:	 VISA
 
 Generated credit card numbers passed the **_Luhn check_**, however they may not work.<br /> You can try to generate some new data, but don't expect anything magical from a random credit card generator.
 
-## `bedbug list`
+## `bedworm list`
 
 Get a list of all messages sent to your temporary email.
 
 ```console
-$ bedbug list abbigail@1secmail.net
+$ bedworm list abbigail@1secmail.net
 ```
 
 View a specific email chosen by id.
 
 ```console
-$ bedbug list abbigail@1secmail.net --id 201501
+$ bedworm list abbigail@1secmail.net --id 201501
 ```
 
 View the most recent email sent to your disposable inbox.
 
 ```console
-$ bedbug list abbigail@1secmail.net --recent
+$ bedworm list abbigail@1secmail.net --recent
 ```

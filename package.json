@@ -1,5 +1,5 @@
 {
-  "name": "bedbug",
+  "name": "bedworm",
   "version": "1.0.0",
   "description": "NodeJS cli tool to generate throwaway information",
   "main": "build.js",
@@ -17,7 +17,7 @@
   "author": "Gejsi <vgejsi@gmail.com>",
   "license": "MIT",
   "bin": {
-    "bedbug": "build.js"
+    "bedworm": "build.js"
   },
   "dependencies": {
     "@ngneat/falso": "^3.0.0",
