@@ -45,9 +45,9 @@ Street:		 1035 Kuphal Mountain
 Zip code:	 69603-6997
 --------Credit/Debit card--------
 Card number:	 4716461751210734
-End date:	 	 08/22
-CVV:			 994
-Card type:	 	 VISA
+End date:	 08/22
+CVV:		 994
+Card type:	 VISA
 ```
 
 Generated credit card numbers passed the **_Luhn check_**, however they may not work.<br /> You can try to generate some new data, but don't expect anything magical from a random credit card generator.
