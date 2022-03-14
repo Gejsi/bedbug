@@ -15,7 +15,7 @@
     "fake data"
   ],
   "author": "Gejsi <vgejsi@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
     "bedbug": "src/index.mjs"
   },
