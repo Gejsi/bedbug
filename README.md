@@ -1,6 +1,6 @@
 <h1 align="center">Bedworm</h1>
 <p align="center">
- <img src="./logo.svg" alt="logo" />
+ <img src="https://raw.githubusercontent.com/Gejsi/bedworm/main/logo.svg" alt="logo" />
 </p>
 <p align="center">Avoid spam, tracking and hacking by generating disposable data.<br />You can even view emails sent to your temporary mailbox.</p>
 

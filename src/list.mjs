@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import c from 'ansi-colors'
 import html from 'html'
 import fetch from 'node-fetch'
 import { baseUrl, printEmails } from './email.mjs'
@@ -18,11 +18,12 @@ const list = async (email, options) => {
 
     if (id === undefined && recent !== true) printEmails(emails)
     else if (recent === true) {
-      if (emails.length === 0) console.log(chalk.yellow('Inbox is empty...'))
+      if (emails.length === 0) console.log(c.yellow('Inbox is empty...'))
       else list(email, { id: emails[0].id, recent: undefined })
     } else console.log(html.prettyPrint(emails.htmlBody, { indent_size: 2 }))
   } catch (error) {
-    console.log(chalk.red(error.stack || error))
+    console.log(c.red('You may have typed a wrong email or id'))
+    console.log(c.red(error.stack || error))
   }
 }
 

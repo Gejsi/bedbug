@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import c from 'ansi-colors'
 
 export const baseUrl = 'https://www.1secmail.com/api/v1/?action='
 
@@ -13,14 +13,13 @@ export const getEmail = (firstName) => {
 }
 
 export const printEmails = (emails) => {
-  if (emails.length === 0) console.log(chalk.yellow('Inbox is empty...'))
+  if (emails.length === 0) console.log(c.yellow('Inbox is empty...'))
   else {
-    emails.map((email) => {
-      const { id, from, date, subject } = email
+    emails.map(({ id, from, date, subject }) => {
       console.log(
-        chalk.green.bold(id),
-        chalk.underline.yellow(from),
-        chalk.grey(date),
+        c.green.bold(id),
+        c.underline.yellow(from),
+        c.grey(date),
         `"${subject}"`
       )
     })

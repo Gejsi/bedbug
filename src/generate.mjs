@@ -4,15 +4,15 @@ import {
   randPassword,
   randUser,
 } from '@ngneat/falso'
-import chalk from 'chalk'
+import c from 'ansi-colors'
 import { getRandCard } from './card.mjs'
 import { getEmail } from './email.mjs'
 
 const heading = (text) =>
-  console.log(chalk.magenta.italic.bold(`--------${text}--------`))
+  console.log(c.magenta.italic.bold(`--------${text}--------`))
 
 const item = (title, text, isShort) =>
-  console.log(chalk.bold(`${title}:\t${isShort ? '\t' : ''}`), text)
+  console.log(c.bold(`${title}:\t${isShort ? '\t' : ''}`), text)
 
 const generate = () => {
   const { firstName, lastName, phone } = randUser()
