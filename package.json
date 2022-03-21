@@ -1,6 +1,6 @@
 {
   "name": "bedworm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js cli tool to generate throwaway information",
   "main": "build.js",
   "scripts": {

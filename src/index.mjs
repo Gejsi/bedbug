@@ -4,7 +4,7 @@ import { program } from 'commander'
 import generate from './generate.mjs'
 import list from './list.mjs'
 
-program.version('1.0.2')
+program.version('1.0.3')
 
 program
   .command('generate')
